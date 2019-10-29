@@ -38,7 +38,7 @@
             }
             function friendlify() {
                 console.log(songArray);
-                for (var i = 0; i < songArray[i].length; i++) {
+                for (var i = 0; i < songArray.length; i++) {
                     document.getElementById("friendly").innerHTML += songArray[i].title + "\nArtist(s): ";
                     for (var j = 0; j < songArray[i].artists.length; j++)  
                         document.getElementById("friendly").innerHTML += songArray[i].artists[j] + " ";
