@@ -32,7 +32,7 @@
                 var stringified = JSON.stringify(data);
                 document.getElementById("serialized").innerHTML += stringified;
                 var objectified = JSON.parse(stringified);
-                songArray += objectified;
+                songArray.push(objectified);
                 friendlify();
             }
             function friendlify() {
