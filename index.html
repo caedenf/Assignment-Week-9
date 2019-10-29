@@ -45,7 +45,7 @@
                     }
                     document.getElementById("friendly").innerHTML += "<br/>Genre(s): ";
                     for (var k = 0; k < songArray[i].genres.length; k++) {
-                        document.getElementById("friendly").innerHTML += songArray[i].genres[k] + " ";
+                        document.getElementById("friendly").innerHTML += songArray[i].genres[k];
                         if (k < songArray[i].genres.length-1)
                              document.getElementById("friendly").innerHTML += ", ";
                     }
