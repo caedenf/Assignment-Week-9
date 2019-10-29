@@ -32,11 +32,11 @@
                 var stringified = JSON.stringify(data);
                 document.getElementById("serialized").innerHTML += stringified;
                 var objectified = JSON.parse(stringified);
-                console.log(objectified);
                 songArray += objectified;
                 friendlify();
             }
             function friendlify() {
+                console.log(songArray);
                 for (var i = 0; i < songArray.length; i++) {
                     document.getElementById("friendly").innerHTML += songArray[i].title + "\nArtist(s): ";
                     for (var j = 0; j < songArray[i].artists.length; j++)  
