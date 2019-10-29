@@ -62,8 +62,13 @@
                             array.push(songArray[i].genres[j]);
                     }
                 }
-                console.log(array);
                 return array;
+            }
+            function searchify() {
+                  var select = document.getElementById("rec_mode");
+                  for(genre in genreArray) {
+                        select.options[select.options.length] = new Option(myobject[genre], genre);
+                  } 
             }
         </script>
     </body>
