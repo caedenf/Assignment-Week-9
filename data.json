@@ -1,0 +1,63 @@
+[{
+  "title":"Tubular Bells",
+  "artists":["Mike Oldfield"],
+  "genres":["progressive rock"],
+  "year":1973 
+ },
+ {
+  "title":"The Most Unwanted Song",
+  "artists":["Dave Soldier","Nina Mankin"],
+  "genres":["experimental","avant-garde"],
+  "year":1997 
+ },
+ {
+  "title":"As Slow as Possible",
+  "artists":["John Cage"],
+  "genres":["experimental"],
+  "year":1987 
+ },
+ {
+  "title":"4 33",
+  "artists":["John Cage"],
+  "genres":["experimental"],
+  "year":1952 
+ },
+ {
+  "title":"Helikopter-Streichquartett",
+  "artists":["Karlheinz Stockhausen"],
+  "genres":["experimental"],
+  "year":1995 
+ },
+ {
+  "title":"Cinq études de bruits",
+  "artists":["Pierre Schaeffer"],
+  "genres":["musique concrète","experimental"],
+  "year":1948 
+ },
+ {
+  "title":"Faerie’s Aire and Death Waltz",
+  "artists":["John Stump"],
+  "genres":["orchestral","experimental"],
+  "year":1980 
+ },
+ {
+  "title":"Walk This Way",
+  "artists":["Aerosmith","Run-DMC"],
+  "genres": {
+    "genre1":"rap rock",
+    "genre2":"hard rock"
+  },
+  "year":1986 
+ },
+ {
+  "title":"Seikilos Epitaph",
+  "artists":["Seikilos"],
+  "genres":["Classical"],
+  "year":"100 CE"
+ },
+ {
+  "title":"Delphic Hymns",
+  "artists":["Athénaios Athenaíou", "Limenios"],
+  "genres":["classical"],
+  "year":"128 BCE"
+ }]
