@@ -38,12 +38,18 @@
             function friendlify() {
                 for (var i = 0; i < songArray.length; i++) {
                     document.getElementById("friendly").innerHTML += songArray[i].title + "<br/>Artist(s): ";
-                    for (var j = 0; j < songArray[i].artists.length; j++)  
-                        document.getElementById("friendly").innerHTML += songArray[i].artists[j] + " ";
+                    for (var j = 0; j < songArray[i].artists.length; j++) {
+                        document.getElementById("friendly").innerHTML += songArray[i].artists[j];
+                        if (j < songArray[i].artists.length-1)
+                             document.getElementById("friendly").innerHTML += ", ";
+                    }
                     document.getElementById("friendly").innerHTML += "<br/>Genre(s): ";
-                    for (var k = 0; k < songArray[i].genres.length; k++)  
+                    for (var k = 0; k < songArray[i].genres.length; k++) {
                         document.getElementById("friendly").innerHTML += songArray[i].genres[k] + " ";
-                    document.getElementById("friendly").innerHTML += "<br/>Released: " + songArray[i].year + "<br/>";
+                        if (k < songArray[i].genres.length-1)
+                             document.getElementById("friendly").innerHTML += ", ";
+                    }
+                    document.getElementById("friendly").innerHTML += "<br/>Released: " + songArray[i].year + "<br/><br/>";
                 }
             }
         </script>
