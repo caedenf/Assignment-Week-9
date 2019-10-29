@@ -4,7 +4,8 @@
         <title>Cover Band</title>
     </head>
     <body>
-        <div id="songs"></div>
+        <div id="serialized"></div>
+        <div id="friendly"></div>
         <script>
             fetch("data.json")
                 .then(function (response) {
@@ -16,19 +17,25 @@
                 .catch(function (error) {
                     console.log(error);
                 });
+            
+            var songArray = [];
             function showData(data) {
                 var stringified = JSON.stringify(data);
-                document.getElementById("songs").innerHTML += stringified;
-                
-                /*for (var i = 0; i < data.length; i++) {
-                  document.getElementById("songs").innerHTML += data[i].title;
-                  for (var j = 0; j < data[i].artists.length; j++)
-                     document.getElementById("songs").innerHTML += data[i].artists[j];
-                  for (var k = 0; k < data[i].genres.length; k++)
-                     document.getElementById("songs").innerHTML += data[i].genres[k];
-                  document.getElementById("songs").innerHTML += data[i].year;
+                document.getElementById("serialized").innerHTML += stringified;
+                var objectified = JSON.parse(stringified);
+                songArray += objectified;
+                friendlify();
+            }
+            function friendlify() {
+                for (var i = 0; i < songArray.length; i++) {
+                    document.getElementById("friendly").innerHTML += songArray[i].title + "\nArtist(s): ";
+                    for (var j = 0; j < songArray[i].artists.length; j++)  
+                        document.getElementById("friendly").innerHTML += songArray[i].artists[j] + " ";
+                    document.getElementById("friendly").innerHTML += "\nGenre(s): ";
+                    for (var k = 0; k < songArray[i].genres.length; k++)  
+                        document.getElementById("friendly").innerHTML += songArray[i].genres[k] + " ";
+                    document.getElementById("friendly").innerHTML += "\nReleased: " + songArray[i].year + "\n";
                 }
-                */
             }
         </script>
     </body>
