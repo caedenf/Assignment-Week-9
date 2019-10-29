@@ -58,7 +58,7 @@
                 var array = [];
                 for (var i = 0; i < songArray.length; i++) {
                     for (var j = 0; j < songArray[i].genres.length; j++) {
-                        if(!genreArray.includes(songArray[i].genres[j]))
+                        if(!array.includes(songArray[i].genres[j]))
                             array.push(songArray[i].genres[j]);
                     }
                 }
