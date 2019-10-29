@@ -28,13 +28,14 @@
                 });
             
             var songArray = [];
-            var genreArray = getGenres();
+            var genreArray = [];
             function showData(data) {
                 var stringified = JSON.stringify(data);
                 document.getElementById("serialized").innerHTML += stringified;
                 var objectified = JSON.parse(stringified);
                 songArray = objectified;
                 friendlify();
+                genreArray = getGenres();
             }
             function friendlify() {
                 for (var i = 0; i < songArray.length; i++) {
@@ -64,7 +65,6 @@
                 console.log(array);
                 return array;
             }
-            console.log(genreArray);
         </script>
     </body>
     </html>
