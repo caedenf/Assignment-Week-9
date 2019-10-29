@@ -32,19 +32,19 @@
                 var stringified = JSON.stringify(data);
                 document.getElementById("serialized").innerHTML += stringified;
                 var objectified = JSON.parse(stringified);
-                songArray.push(objectified);
+                songArray = objectified;
                 friendlify();
             }
             function friendlify() {
                 console.log(songArray);
-                for (var i = 0; i < songArray[0].length; i++) {
-                    document.getElementById("friendly").innerHTML += songArray[0].[i].title + "\nArtist(s): ";
-                    for (var j = 0; j < songArray[0].[i].artists.length; j++)  
-                        document.getElementById("friendly").innerHTML += songArray[0].[i].artists[j] + " ";
+                for (var i = 0; i < songArray[i].length; i++) {
+                    document.getElementById("friendly").innerHTML += songArray[i].title + "\nArtist(s): ";
+                    for (var j = 0; j < songArray[i].artists.length; j++)  
+                        document.getElementById("friendly").innerHTML += songArray[i].artists[j] + " ";
                     document.getElementById("friendly").innerHTML += "\nGenre(s): ";
-                    for (var k = 0; k < songArray[0].[i].genres.length; k++)  
-                        document.getElementById("friendly").innerHTML += songArray[0].[i].genres[k] + " ";
-                    document.getElementById("friendly").innerHTML += "\nReleased: " + songArray[0].[i].year + "\n";
+                    for (var k = 0; k < songArray[i].genres.length; k++)  
+                        document.getElementById("friendly").innerHTML += songArray[i].genres[k] + " ";
+                    document.getElementById("friendly").innerHTML += "\nReleased: " + songArray[i].year + "\n";
                 }
             }
         </script>
