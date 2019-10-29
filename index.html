@@ -11,6 +11,8 @@
         <h2>Part 4: Filter the data</h2>
         <div id="search">
             <p>Search by genre: </p>
+            <select id="pickGenre">        
+            </select>
             //put genres in array
             //create select form using array as options
             //if song has genre add to div
@@ -65,7 +67,7 @@
                 return array;
             }
             function searchify() {
-                  var select = document.getElementById("rec_mode");
+                  var select = document.getElementById("pickGenre");
                   for(genre in genreArray) {
                         select.options[select.options.length] = new Option(myobject[genre], genre);
                   } 
