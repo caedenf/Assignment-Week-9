@@ -17,7 +17,7 @@
         </div>
         <div id="results"></div>
         <script>
-            console.log("run 6");
+            console.log("run 7");
             fetch("data.json")
                 .then(function (response) {
                     return response.json();
@@ -75,6 +75,7 @@
             $("#pickGenre").change(showResults);
 
             function showResults(){
+                document.getElementById("results").innerHTML = "";
                 for (var a = 0; a < songArray.length; a++) {
                       for (var i = 0; i < songArray[a].genres.length; i++) {
                           var select = document.getElementById("pickGenre");
