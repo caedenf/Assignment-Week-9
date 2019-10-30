@@ -69,7 +69,7 @@
             function searchify() {
                   var select = document.getElementById("pickGenre");
                   for(genre in genreArray) {
-                        select.options[select.options.length] = new Option(genreArray[genre], genre);
+                        select.options.add(new Option(genreArray[genre], genreArray[genre]));
                   } 
             }
         </script>
