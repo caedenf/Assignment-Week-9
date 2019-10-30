@@ -16,7 +16,7 @@
         </div>
         <div id="results"></div>
         <script>
-            console.log("run 4");
+            console.log("run 5");
             fetch("data.json")
                 .then(function (response) {
                     return response.json();
@@ -70,22 +70,22 @@
                   var select = document.getElementById("pickGenre");
                   for (genre in genreArray)
                         select.options.add(new Option(genreArray[genre], genreArray[genre]));
-                  for (song in songArray) {
-                      for (var i = 0; i < song.genres.length; i++) {
-                          if (select.value == song.genres[i]) {
-                              document.getElementById("results").innerHTML += song.title + "<br/>Artist(s): ";
-                              for (var j = 0; j < song.artists.length; j++) {
-                                document.getElementById("results").innerHTML += song.artists[j];
-                                if (j < song.artists.length-1)
+                  for (var a = 0; a < songArray.length; a++) {
+                      for (var i = 0; i < songArray[a].genres.length; i++) {
+                          if (select.value == songArray[a].genres[i]) {
+                              document.getElementById("results").innerHTML += songArray[a].title + "<br/>Artist(s): ";
+                              for (var j = 0; j < songArray[a].artists.length; j++) {
+                                document.getElementById("results").innerHTML += songArray[a].artists[j];
+                                if (j < songArray[a].artists.length-1)
                                     document.getElementById("results").innerHTML += ", ";
                               }
                               document.getElementById("results").innerHTML += "<br/>Genre(s): ";
-                              for (var k = 0; k < song.genres.length; k++) {
-                                document.getElementById("results").innerHTML += song.genres[k];
-                                if (k < song.genres.length-1)
+                              for (var k = 0; k < songArray[a].genres.length; k++) {
+                                document.getElementById("results").innerHTML += songArray[a].genres[k];
+                                if (k < songArray[a].genres.length-1)
                                     document.getElementById("results").innerHTML += ", ";
                               }
-                              document.getElementById("results").innerHTML += "<br/>Released: " + song.year + "<br/><br/>";
+                              document.getElementById("results").innerHTML += "<br/>Released: " + songArray[a].year + "<br/><br/>";
                           }
                        }
                   }
