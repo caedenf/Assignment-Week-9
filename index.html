@@ -70,24 +70,24 @@
             }
             function searchify() {
                   var select = document.getElementById("pickGenre");
-                  for (genre in genreArray) {
+                  for (genre in genreArray)
                         select.options.add(new Option(genreArray[genre], genreArray[genre]));
-                  } 
                   for (song in songArray) {
                       for (var i = 0; i < song.genres.length; i++) {
                           if (select.value == song.genres[i]) {
                               document.getElementById("search").innerHTML += song.title + "<br/>Artist(s): ";
                               for (var j = 0; j < song.artists.length; j++) {
                                 document.getElementById("search").innerHTML += song.artists[j];
-                              if (j < song.artists.length-1)
-                                document.getElementById("search").innerHTML += ", ";
+                                if (j < song.artists.length-1)
+                                    document.getElementById("search").innerHTML += ", ";
+                              }
                               document.getElementById("search").innerHTML += "<br/>Genre(s): ";
                               for (var k = 0; k < song.genres.length; k++) {
                                 document.getElementById("search").innerHTML += song.genres[k];
-                              if (k < song.genres.length-1)
-                                document.getElementById("search").innerHTML += ", ";
+                                if (k < song.genres.length-1)
+                                    document.getElementById("search").innerHTML += ", ";
                               }
-                          document.getElementById("search").innerHTML += "<br/>Released: " + song.year + "<br/><br/>";
+                              document.getElementById("search").innerHTML += "<br/>Released: " + song.year + "<br/><br/>";
                           }
                        }
                   }
