@@ -75,6 +75,7 @@
                   var select = document.getElementById("pickGenre");
                   for (genre in genreArray)
                         select.options.add(new Option(genreArray[genre], genreArray[genre]));
+                showResults();
             }
             $("#pickGenre").change(showResults);
 
