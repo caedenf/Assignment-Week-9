@@ -18,7 +18,7 @@
             //if song has genre add to div
         </div>
         <script>
-            console.log("run 1");
+            console.log("run 2");
             fetch("data.json")
                 .then(function (response) {
                     return response.json();
@@ -68,8 +68,10 @@
                 return array;
             }
             function searchify() {
+                console.log("here");
                   var select = document.getElementById("pickGenre");
                   for(genre in genreArray) {
+                        console.log("here2");
                         select.options.add(new Option(genreArray[genre], genreArray[genre]));
                   } 
             }
