@@ -2,7 +2,6 @@
     <head>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Cover Band</title>
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     </head>
     <body>
         <h2>Part 2: Serialize and display</h2>
@@ -14,6 +13,7 @@
             <p>Search by genre: </p>
             <select id="pickGenre">        
             </select>
+            <input id="submit" type="button" value="Submit" onclick="showResults();" />
             <br/>
         </div>
         <div id="results"></div>
@@ -75,9 +75,7 @@
                   var select = document.getElementById("pickGenre");
                   for (genre in genreArray)
                         select.options.add(new Option(genreArray[genre], genreArray[genre]));
-                showResults();
             }
-            $("#pickGenre").change(showResults);
 
             function showResults(){
                 document.getElementById("results").innerHTML = "";
