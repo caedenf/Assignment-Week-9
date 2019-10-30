@@ -2,6 +2,7 @@
     <head>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Cover Band</title>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     </head>
     <body>
         <h2>Part 2: Serialize and display</h2>
@@ -70,8 +71,13 @@
                   var select = document.getElementById("pickGenre");
                   for (genre in genreArray)
                         select.options.add(new Option(genreArray[genre], genreArray[genre]));
-                  for (var a = 0; a < songArray.length; a++) {
+            }
+            $("#pickGenre").change(showResults);
+
+            function showResults(){
+                for (var a = 0; a < songArray.length; a++) {
                       for (var i = 0; i < songArray[a].genres.length; i++) {
+                          var select = document.getElementById("pickGenre");
                           if (select.value == songArray[a].genres[i]) {
                               document.getElementById("results").innerHTML += songArray[a].title + "<br/>Artist(s): ";
                               for (var j = 0; j < songArray[a].artists.length; j++) {
